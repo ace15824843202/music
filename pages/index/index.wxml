@@ -1,0 +1,38 @@
+<!--pages/request/request.wxml-->
+<view class='title'>新歌榜</view>
+
+ <input placeholder='搜索：（例如）海阔天空' bindconfirm="seacherSong"></input>
+
+ <block wx:if="{{flag}}">
+   <view wx:for="{{seacherArr}}" wx:key="key">
+    <navigator class="clearfix" url="/pages/music/music?songId={{item.songid}}">
+     <image    
+        src="/img/music.png"
+        lazy-load="{{true}}"
+      ></image>
+      <view class='intro'>
+        <text class='int'>{{item.songname}}</text>
+        <text class='int'>{{item.artistname}}</text>
+      </view>
+    </navigator> 
+  </view>
+  <view class='tipSty'>{{tip}}</view>
+ 
+ </block>
+ <block wx:else>
+  <view wx:for="{{musicArr}}" wx:key="key">
+    <navigator class="clearfix" url="/pages/music/music?songId={{item.song_id}}">
+     <image      
+        src="{{item.pic_small}}"
+          lazy-load="{{true}}"
+      ></image>
+      <view class='intro'>
+         <text class='int'>{{item.title}}</text>
+          <text class='int'>{{item.author}}</text>
+      </view>
+      
+    </navigator>
+  </view>
+ 
+ </block>
+

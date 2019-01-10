@@ -1,0 +1,15 @@
+<!--pages/music/music.wxml-->
+<audio
+  poster="{{musicInfo.pic_radio}}"
+  name="{{musicInfo.title}}"
+  author="{{musicInfo.author}}"
+  src="{{musicLink.show_link}}"
+  controls
+  loop
+></audio>
+<block wx:for="{{musicLrc}}" wx:key="key">
+  <view>
+  {{item}}
+  </view>
+</block>
+

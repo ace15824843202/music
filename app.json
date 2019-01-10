@@ -1,0 +1,32 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/hotMusic/hotMusic",
+    "pages/music/music",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Chicken音乐",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh":true
+
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "新歌榜",
+        "iconPath":"img/new1.png",
+        "selectedIconPath":"img/new2.png"
+      },
+      {
+        "pagePath": "pages/hotMusic/hotMusic",
+        "text": "热歌榜",
+        "iconPath": "img/hot1.png",
+        "selectedIconPath": "img/hot2.png"
+      }
+    ]
+  }
+}
